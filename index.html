@@ -52,6 +52,30 @@ img.shadow {
 img.bottom-space {
 	margin-bottom:40px
 }
+.prevent-overflow
+{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    display:block;
+    color: inherit !important;
+}
+.prevent-overflow b {
+  position:relative;
+  top: -3px;
+}
+
+.landing-page .heading .hpanel {
+  color: #6a6c6f !important;
+}
+
+.well {
+  margin: 1px !important;
+  padding: 1px 5px !important;
+  font-size: 80% !important;
+}
+
 </style>
            <a href="http://griggi.com" target="_blank">
                <img src="/images/logo.gif" style="width:50px; margin-top: -15px;"/>
@@ -69,44 +93,80 @@ img.bottom-space {
     </div>
 </nav>
 
-	<div class="modal fade hmodal-success" id="my-modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="color-line"></div>
-              <div class="modal-body">
-								<div id="get-started-step-1">
-									<h4 class="text-center text-info">Griggi for business is out</h4>
-                  <p>First version of our software is out. But is <b>not completely DIY (short form for 'do it yourself')</b>. It is aimed at shared spaces like cafes, hotels, PGs (Paying Guests), coworking spaces etc.</p>
-                  <p>We are passing 50% of revenue that we make from the sale if you could refer us to one of the above mentioned establishement owner & he/she ends up installing Griggi at his premise.</p>
-								</div>
-							</div>
-							<div class="modal-footer">
-										<a href="/wifi-business-solution-cafe-restaurant-coworking-space/" class="btn btn-primary">Read More</a>
-							</div>
-          </div>
-      </div>
-  </div>
 
 
 <header id="page-top" style="height: auto !important; padding-bottom: 20px; background-color: #455463; background-image:none; position: relative">
     <img src="../images/logo.gif" style="position: absolute; opacity: 0.2; height: 80%;"/>
     <div class="container">
         <div class="heading text-center" style="margin-top:30px;">
-            <h2>
+            <h2 style="margin-bottom: 1em">
               Ride Sharing through <span class="text-info" style="font-size: inherit; font-weight:inherit">Discoverable</span> Whatsapp groups
             </h2>
+	    <div class="row">
+            <div class="col-lg-3 col-lg-offset-3">
+                <div class="hpanel hblue">
+                    <div class="panel-body text-center h-200">
+                        <i class="pe-7s-search fa-4x"></i>
+                        <h3 class="m-xs">1. Join Group</h3>
+                        <small>Discover & Join a group based on your home & office location.</small>
+                        
+                        <h3 class="no-margins font-extra-bold text-info" style="margin-top: 15px !important">10 groups</h3>
+                         <div class="font-bold">get added daily <i class="fa fa-level-up text-info"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="hpanel stats hgreen">
+                    <div class="panel-body h-200">
+                        <div class="stats-title pull-left" style="text-align:left">
+                            <h3>2. Share ride</h3>
+                        </div>
+                        <div class="stats-icon pull-right">
+                            <i class="pe-7s-chat fa-4x"></i>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row m-xs" style="margin-top: -15px; margin-left: -20px;">
+                          <div class="col-xs-9" style="text-align:left">
+                            <table>
+                              <tr>
+                                <td><div style="width:4px;height:0;border:5px solid #62cb31;overflow:hidden"></div></td>
+                               <td>&nbsp;Pocha</td>
+                              </tr>
+                            </table>
+                            <div class="well"><em>Leaving Brigade Gardenia in 10 min. Anyone wanna join ?</em></div>
+                            <table class="pull-right">
+                              <tr>
+                                <td><div style="width:4px;height:0;border:5px solid #62cb31;overflow:hidden"></div></td>
+                               <td>&nbsp;Natasha</td>
+                              </tr>
+                            </table>
+                            <div class="clearfix"></div>
+
+                            <div class="well" style="text-align:right"><em>Cool. I am in.<br/> See you at the gate in 5.</em></div>
+                          </div>
+                          <div class="col-xs-3">
+                            <table style="font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #62cb31;overflow:hidden"></div></div></td><td class="legendLabel">Pocha</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #A4E585;overflow:hidden"></div></div></td><td class="legendLabel">Nishant</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #368410;overflow:hidden"></div></div></td><td class="legendLabel">Suramya</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #8DE563;overflow:hidden"></div></div></td><td class="legendLabel">Natasha</td></tr></tbody></table>
+                         </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
             <!--<p></p>-->
-						<ol style="text-align:left; max-width:600px; margin: auto; margin-bottom: 20px; margin-top: 20px">
+						<!--<ol style="text-align:left; max-width:600px; margin: auto; margin-bottom: 20px; margin-top: 20px">
 								<li>Groups are created as &lt;source&gt; - &lt;destination&gt;</li>
 								<li>Search for one based on your home & office location</li>
                 <li>Join the group & respond to people looking/offering ride</li>
-						</ol>
+						</ol>-->
             <!--<div class="alert alert-warning" style="max-width: 600px; margin:10px auto; text-align:left">
                 <i class="fa fa-usd fa-2x" style="padding-right:20px"></i> Griggi router starts at $20 one time payment. <span class="text-info">Always free for &lt; 10 users</span> <br/>
                 <i class="fa fa-bolt fa-2x" style="padding-right:20px"></i> Tested to support 5 to 500 users at ISP speed of 250 Mbps<br/>
                 <i class="fa fa-thumbs-up fa-2x" style="padding-right:10px"></i> Totally free one month demo (router cost refunded post demo)<br/>
             </div>-->
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuO7z8wvZoOfG7vuXXpfUWMRlnweqE8L4RYT283KeOrgpaQ/viewform" class="btn btn-info btn-lg">Discover groups around you</a>
+          <a href="#" class="btn btn-info btn-lg">Discover groups around you</a>
             <!--<a href="#how-it-works" class="btn btn-primary btn-lg page-scroll">Learn More</a>-->
         </div>
     </div>
@@ -134,22 +194,22 @@ img.bottom-space {
 <section id="components" class="bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-12">
               <h2 class="text-center" style="margin-bottom:1em">Discover & Join Whatsapp group</h2>
 	          	  <div class="hpanel">
                     <div class="panel-body text-center h-200">
                       <div class="row">
                         <div class="col-md-6">
-                          <h4 class="m-t-xxxl">Home Location</h4>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Brigade Gardenia, JP Nagar 7th Phase" value="">
+                          <h4 class="m-t-xxxl"><i class="fa fa-2x fa-home"></i> Home Location</h4>
+                          <input type="text" class="form-control" id="home" name="home" placeholder="Brigade Gardenia, JP Nagar 7th Phase" value="Brigade Gardenia">
                         </div>
                         <div class="col-md-6">
-                          <h4 class="m-t-xxxl">Office Location</h4>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="MindTree, Global Village" value="">
+                          <h4 class="m-t-xxxl"><i class="fa fa-2x fa-laptop"></i> Office Location</h4>
+                          <input type="text" class="form-control" id="office" name="office" placeholder="MindTree, Global Village" value="Arkere">
                         </div>
                       </div>
                       <div class="row text-center" style="margin-top: 1em">
-                        <a href="#" class="btn btn-lg btn-info">Search</a>
+                        <a href="#" onclick="doSearch()" class="btn btn-lg btn-info"> Search for Whatsapp Groups</a>
                       </div>
                    </div><!--panel-body-->
                 </div><!--hpanel-->
@@ -158,18 +218,25 @@ img.bottom-space {
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
               <div class="hpanel filter-item">
-                    <a href="#">
                     <div class="panel-body">
-                        <div class="pull-right text-right">
-                                <small class="stat-label">20 members</small>
-                            <h4><a href="#" class="btn btn-info">Join</a></h4>
+                      <div class="row">
+                        <div class="col-xs-7">
+                           <p class="m-b-xs prevent-overflow"><i class="fa fa-2x fa-home"></i> <b>Brigade Gardenia, Kothnur Village Main Road, JP Nagar, Bengaluru, Karnataka, India</b></p>
+                           <p class="m-b-xs prevent-overflow"><i class="fa fa-2x fa-laptop"></i> <b>IIM Bangalore, Bengaluru, Karnataka, India</b></p>
                         </div>
-                        <h4 class="m-b-xs">BG-MT-GlobalV</h4>
-                        <p class="small">Created by - Konal Gondal</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="col-xs-5">
+                          <div class="text-right">
+                              <small class="stat-label">20 members <i class="fa fa-2x fa-group"></i></small>
+                              <p class="small">Creator: Konal Gondal <i class="fa fa-2x fa-thumbs-o-up"></i></p>
+                          </div>
+                       </div>
+                      </div><!-- row -->
+                      <div class="text-center" style="margin-top:1em">
+                         <h4><a href="#" class="btn btn-primary">Get whatsapp group link to join</a></h4>
+                      </div>
+                    </div><!-- panel-body -->
+                </div><!-- hpanel -->
+            </div><!-- col-lg-8 -->
        </div>
        <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -177,9 +244,10 @@ img.bottom-space {
                     <a href="#">
                     <div class="panel-body">
                         <div class="pull-right text-right">
-                            <h4><a href="#" class="btn btn-info">Create One</a></h4>
+                            <h4><a href="#" class="btn btn-primary">Submit Group</a></h4>
                         </div>
-                        <h4 class="m-b-xs">No Groups Found</h4>
+                        <h4 class="m-b-xs"><i class="fa fa-2x fa-meh-o"></i> Could not find a relevant group ?</h4>
+                        <p>You may create a new whatsapp group & submit here. <br/>If you are admin of a group that is not submitted here, feel free to submit.</p>
                     </div>
                     </a>
                 </div>
@@ -200,11 +268,22 @@ img.bottom-space {
 <script src="./js/jquery.highlight.js"></script>
 <script src="./js/jquery.cookie.js"></script>
 <script src="./js/jquery.flexverticalcenter.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVhHECf24H7Dv6aA96hkhgxFoP9ErB7zY&libraries=places"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+
 
 <!-- Local script for menu handle -->
 <!-- It can be also directive -->
 <script>
+    var client, index, autocomplete_home, autocomplete_office
+
     $(document).ready(function () {
+
+        autocomplete_home = new google.maps.places.Autocomplete(document.getElementById('home'), {});
+        autocomplete_office = new google.maps.places.Autocomplete(document.getElementById('office'), {});
+
+        client = algoliasearch('W1OPFFHKXI', '1a983b6bb690f9e517c3eda107f3c98d');
+        index = client.initIndex('pillion');
 
         // Page scrolling feature
         $('a.page-scroll').bind('click', function(event) {
@@ -220,36 +299,15 @@ img.bottom-space {
             offset: 80
         });
 
-				/*$('li').highlight('Griggi');
-				$('p').highlight('Griggi');
-				$('span').highlight('Griggi');
-				$('a').highlight('Griggi');
-				$('h3').highlight('Griggi');*/
-
-				if ($.cookie("get-started-step-1-done")) {
-					$("#get-started-step-1").hide();
-					$("#get-started-step-2").show();
-					$(".modal-footer").hide();
-				}
-				$(".vertical-center").flexVerticalCenter();
-				$(".get-started").click(function() {
-						if (!$.cookie("get-started-step-1-done"))
-							mixpanel.track('get-started')
-						$("#my-modal").modal()
-				})
     });
-</script>
 
-<script>
-	function showNext(option) {
-		mixpanel.track(option)
-		$.cookie("get-started-step-1-done", 1);
-		if (option == "not-interested")
-			$("#my-modal").modal('hide')
-		$("#get-started-step-1").hide();
-		$("#get-started-step-2").show();
-		$(".modal-footer").hide();
-	}
+    function doSearch() {
+        index.search($("#home").val() + " " + $("#office").val()
+          , function searchDone(err, content) {
+            console.log(err, content);
+        });
+    }
+    $("i").addClass("text-info");
 </script>
 
 
