@@ -76,6 +76,22 @@ img.bottom-space {
   font-size: 80% !important;
 }
 
+#discover-box input[type=text] {
+  height: 46px;
+  border: 0;
+}
+#discover-box .input-group {
+  margin-bottom: 1em;
+  border: 0.1px dashed #3498db !important;
+}
+#discover-box span {
+  border: 0;
+}
+#discover-box img {
+  margin-bottom: 1em;
+}
+
+
 </style>
            <a href="http://griggi.com" target="_blank">
                <img src="/images/logo.gif" style="width:50px; margin-top: -15px;"/>
@@ -177,14 +193,24 @@ img.bottom-space {
     <div class="container">
     <div class="row">
         <div class="col-md-4">
+            <div class="text-center">
+              <i class="fa fa-check-square-o icon-big"></i>
+            </div>
             <h4 class="text-center">Everybody has Whatsapp</h4>
             <p>Nobody might be requesting/offering a ride when you are looking but someone will. Be the part of the group.Once you find someone, you can interact with him/her through one on one whatsapp message.</p>
         </div>
         <div class="col-md-4">
+            <div class="text-center">
+              <i class="fa fa-meh-o icon-big"></i>
+            </div>
             <h4 class="text-center">Mitigate trust issues</h4>
             <p>Join <b>only</b> your <i>apartment</i>-<i>company</i> group if you do not want to pool with strangers. If you are really particular, insist on person's picture of his/her company id card to be shared with you in one on one whatsapp messaging.</p>
         </div>
         <div class="col-md-4">
+            <div class="text-center">
+              <i class="fa pe-7s-trash icon-big"></i>
+              <i class="fa fa-times fa-4x" style="position:relative; margin-left:-45px; top: -10px"></i>
+            </div>
             <h4 class="text-center">Spam Free</h4>
             <p>You can leave whenever you want to. Mute the group if you getting too many notification. There is very less chance of someone spamming you on Whatsapp as Whatsapp folks take 'report spam' very seriously. It is extremely painful to get another phone number unlike creating a new account or getting a new email address.</p>
         </div>
@@ -195,23 +221,24 @@ img.bottom-space {
 <section id="components" class="bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-              <h2 class="text-center" style="margin-bottom:1em">Discover & Join Whatsapp group</h2>
-	          	  <div class="hpanel">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h2 class="text-center" style="margin-bottom:1em">Discover & Join <span style="font-family: 'Variane'" class="text-info">Pillion</span> groups</h2>
+	          	  <div class="hpanel hblue" id="discover-box">
                     <div class="panel-body text-center h-200">
                       <div class="row">
-                        <div class="col-md-6">
-                          <h4 class="m-t-xxxl"><i class="fa fa-2x fa-home"></i> Home Location</h4>
-                          <input type="text" class="form-control" id="home" name="home" placeholder="Brigade Gardenia, JP Nagar 7th Phase" value="Brigade Gardenia">
+                        <div class="col-lg-2">
+                          <img src="../images/logo.gif" style="width:100px;"/>
                         </div>
-                        <div class="col-md-6">
-                          <h4 class="m-t-xxxl"><i class="fa fa-2x fa-laptop"></i> Office Location</h4>
-                          <input type="text" class="form-control" id="office" name="office" placeholder="MindTree, Global Village" value="Arkere">
-                        </div>
-                      </div>
-                      <div class="row text-center" style="margin-top: 1em">
-                        <a href="#" onclick="doSearch()" class="btn btn-lg btn-info"> Search for Whatsapp Groups</a>
-                      </div>
+                        <div class="col-lg-10">
+                          <div class="input-group"> 
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-2x fa-home"></i></span> <input type="text" class="form-control" id="home" name="home" placeholder="Type Home Location">
+                          </div>
+                          <div class="input-group"> 
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-2x fa-laptop"></i></span> <input type="text" class="form-control" id="office" name="home" placeholder="Type Office Location">
+                          </div>
+                          <a href="#" onclick="doSearch()" class="btn btn-lg btn-info"> Search</a>
+                        </div><!-- col -->
+                      </div><!-- row -->
                    </div><!--panel-body-->
                 </div><!--hpanel-->
             </div>
@@ -241,16 +268,16 @@ img.bottom-space {
        </div>
        <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-              <div class="hpanel filter-item">
-                    <a href="#">
+              <div class="hpanel hgreen filter-item">
                     <div class="panel-body">
-                        <div class="pull-right text-right">
-                            <h4><a href="#" class="btn btn-primary">Submit Group</a></h4>
+                        <h4 class="text-center"> Could not find a relevant group ? &nbsp;&nbsp;<i class="fa fa-2x fa-frown-o" style="margin-top:10px;"></i></h4>
+                        <div class="m-b-xs">
+                          <div class="pull-right">
+                              <h4><a href="#" class="btn btn-success">Submit Group</a></h4>
+                          </div>
+                          <p>You may create a new whatsapp group & submit here. <br/>If you are admin of a group that is not submitted here, feel free to submit.</p>
                         </div>
-                        <h4 class="m-b-xs"><i class="fa fa-2x fa-meh-o"></i> Could not find a relevant group ?</h4>
-                        <p>You may create a new whatsapp group & submit here. <br/>If you are admin of a group that is not submitted here, feel free to submit.</p>
                     </div>
-                    </a>
                 </div>
             </div>
        </div>
@@ -299,6 +326,10 @@ img.bottom-space {
             target: '.navbar-fixed-top',
             offset: 80
         });
+
+        $("#discover-box input[type=text]").focus(function(){
+          $(this).val('')
+        })
 
     });
 
