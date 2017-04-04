@@ -26,7 +26,7 @@
 
 <body class="landing-page">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default" style="margin-bottom:0">
     <div class="container">
         <div class="navbar-header" style="margin-top:18px">
             <!--<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
@@ -112,19 +112,29 @@ img.bottom-space {
 
 
 <header id="page-top" style="height: auto !important; padding-bottom: 20px; background-color: #455463; background-image:none; position: relative">
-    <img src="../images/logo.gif" style="position: absolute; opacity: 0.2; height: 80%;"/>
+    <img src="../images/logo.gif" style="position: absolute; opacity: 0.2; max-height: 400px; max-width: 100%"/>
     <div class="container">
-        <div class="heading text-center" style="margin-top:30px;">
+        <div class="heading text-center" style="margin-top:10px;">
             <h2 style="margin-bottom: 1em">
-              Ride Sharing through <span class="text-info" style="font-size: inherit; font-weight:inherit">Discoverable</span> Whatsapp groups
+              <span style="font-size: 1.5em; font-weight:inherit; font-family:'Variane'">Car Pooling through Whatsapp groups</span>
             </h2>
 	    <div class="row">
             <div class="col-lg-3 col-lg-offset-3">
                 <div class="hpanel hblue">
                     <div class="panel-body text-center h-200">
-                        <i class="pe-7s-search fa-4x"></i>
-                        <h3 class="m-xs">1. Join Group</h3>
-                        <small>Discover & Join a group based on your home & office location.</small>
+                        <p style="font-size:2.5em">Step 1.</p>
+                        <hr/>
+                        <div class="stats-title pull-left" style="text-align:left">
+                            <h3 class="m-xs">Join Group</h3>
+                        </div>
+                        <div class="stats-icon pull-right">
+                            <!--<i class="pe-7s-chat fa-4x"></i>-->
+                            <i class="pe-7s-search fa-4x"></i>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+
+                        <p style="margin:1.7em 0; color:inherit">Discover & Join a group based on your home & office location.</p>
                         
                         <h3 class="no-margins font-extra-bold text-info" style="margin-top: 15px !important">10 groups</h3>
                          <div class="font-bold">get added daily <i class="fa fa-level-up text-info"></i></div>
@@ -136,8 +146,10 @@ img.bottom-space {
             <div class="col-lg-4">
                 <div class="hpanel stats hgreen">
                     <div class="panel-body h-200">
+                        <p style="font-size:2.5em">Step 2.</p>
+                        <hr/>
                         <div class="stats-title pull-left" style="text-align:left">
-                            <h3>2. Share ride</h3>
+                            <h3>Share ride</h3>
                         </div>
                         <div class="stats-icon pull-right">
                             <!--<i class="pe-7s-chat fa-4x"></i>-->
@@ -231,10 +243,10 @@ img.bottom-space {
                         </div>
                         <div class="col-lg-10">
                           <div class="input-group"> 
-                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-2x fa-home"></i></span> <input type="text" class="form-control" id="home" name="home" placeholder="Type Home Location">
+                            <span class="input-group-addon"><i class="fa fa-2x fa-home"></i></span> <input type="text" class="form-control" id="home" name="home" placeholder="Type Home Location">
                           </div>
                           <div class="input-group"> 
-                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-2x fa-laptop"></i></span> <input type="text" class="form-control" id="office" name="home" placeholder="Type Office Location">
+                            <span class="input-group-addon"><i class="fa fa-2x fa-laptop"></i></span> <input type="text" class="form-control" id="office" name="home" placeholder="Type Office Location">
                           </div>
                           <a href="#" onclick="doSearch()" class="btn btn-lg btn-info"> Search</a>
                         </div><!-- col -->
@@ -307,8 +319,9 @@ img.bottom-space {
 
     $(document).ready(function () {
 
-        autocomplete_home = new google.maps.places.Autocomplete(document.getElementById('home'), {});
-        autocomplete_office = new google.maps.places.Autocomplete(document.getElementById('office'), {});
+            autocomplete_home = new google.maps.places.Autocomplete(document.getElementById('home'), {});
+            autocomplete_office = new google.maps.places.Autocomplete(document.getElementById('office'), {});
+
 
         client = algoliasearch('W1OPFFHKXI', '1a983b6bb690f9e517c3eda107f3c98d');
         index = client.initIndex('pillion');
@@ -330,6 +343,7 @@ img.bottom-space {
         $("#discover-box input[type=text]").focus(function(){
           $(this).val('')
         })
+        
 
     });
 
@@ -341,7 +355,6 @@ img.bottom-space {
     }
     $("i").addClass("text-info");
 </script>
-
 
 
 </body></html>
